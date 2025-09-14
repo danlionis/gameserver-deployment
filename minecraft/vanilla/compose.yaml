@@ -1,0 +1,71 @@
+services:
+  vanilla:
+    image: itzg/minecraft-server:latest
+    environment:
+      EULA: "TRUE"
+      TYPE: "PAPER"
+      MEMORY: "10G"
+      ENABLE_RCON: "true"
+      RCON_PASSWORD: ${RCON_PASSWORD:-supersecret}
+      ENABLE_QUERY: "true"
+      MOTD: "Jetzt wieder da :)"
+      DIFFICULTY: normal
+      MODE: survival
+      WHITELIST: |
+        Aurelion__
+        Cchheeff
+        DerDreckigeDan
+        Djan1k
+        Drex_001
+        F_L_I_X
+        FashleHD
+        Floixx
+        Goassnflexer
+        Hirion42
+        Iffu
+        InfiniteLevel
+        Janiskus_Heslo
+        Leoleonhard55
+        M0rEZ
+        MSAT_Gaming
+        MrEnd_MC
+        Sev_Fix
+        Souper_Fox
+        Sushirolle3_0
+        Uglubathr
+        Wizard_4321
+        Xenophonium
+        felixf15
+        miritzu
+        ozonemining
+        peschelon
+        quietspan
+        seibsan
+        yungmoxer
+      OPS: |
+        DerDreckigeDan
+    ports:
+      - "${SERVER_PORT:-25565}:25565"
+      # - "${RCON_PORT:-25575}:25575"
+    volumes:
+      - data:/data         # Persistent world + configs
+
+  backup:
+    image: itzg/mc-backup
+    environment:
+      BACKUP_INTERVAL: "24h"
+      BACKUP_RETENTION_DAYS: "7"
+      INITIAL_DELAY: "60s"
+      RCON_HOST: vanilla
+      RCON_PASSWORD: ${RCON_PASSWORD:-supersecret}
+      TZ: "Europe/Berlin"
+    volumes:
+      - data:/data:ro      # Read-only world data
+      - backups:/backups   # Where backups are stored
+    depends_on:
+      - vanilla
+
+volumes:
+  data:
+  backups:
+
