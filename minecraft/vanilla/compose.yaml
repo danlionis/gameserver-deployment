@@ -11,6 +11,8 @@ services:
       MOTD: "Jetzt wieder da :)"
       DIFFICULTY: normal
       MODE: survival
+      ICON: https://raw.githubusercontent.com/danlionis/gameserver-deployment/refs/heads/main/minecraft/vanilla/icon.png
+      OVERRIDE_ICON: true
       WHITELIST: |
         Aurelion__
         Cchheeff
@@ -45,10 +47,10 @@ services:
       OPS: |
         DerDreckigeDan
     ports:
-      - "${SERVER_PORT:-25565}:25565"
+      - "${SERVER_PORT:-25566}:25565"
       # - "${RCON_PORT:-25575}:25575"
     volumes:
-      - data:/data         # Persistent world + configs
+      - data:/data
 
   backup:
     image: itzg/mc-backup
@@ -60,8 +62,8 @@ services:
       RCON_PASSWORD: ${RCON_PASSWORD:-supersecret}
       TZ: "Europe/Berlin"
     volumes:
-      - data:/data:ro      # Read-only world data
-      - backups:/backups   # Where backups are stored
+      - data:/data:ro
+      - backups:/backups
     depends_on:
       - vanilla
 
