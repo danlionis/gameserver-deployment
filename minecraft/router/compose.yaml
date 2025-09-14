@@ -1,0 +1,18 @@
+services:
+  mc-router:
+    image: itzg/mc-router
+    container_name: mc-router
+    environment:
+      IN_DOCKER: "true"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    networks:
+      - mc-router
+    ports:
+      - "25565:25565"
+    restart: unless-stopped
+
+networks:
+  mc-router:
+    driver: bridge
+

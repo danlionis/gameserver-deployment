@@ -46,11 +46,13 @@ services:
         yungmoxer
       OPS: |
         DerDreckigeDan
-    ports:
-      - "${SERVER_PORT:-25566}:25565"
-      # - "${RCON_PORT:-25575}:25575"
     volumes:
       - data:/data
+    networks:
+      - mc-router
+    labels:
+      mc-router.host: "vanilla.mc.dummsuff.com"
+      mc-router.default: true
 
   backup:
     image: itzg/mc-backup
@@ -64,6 +66,8 @@ services:
     volumes:
       - data:/data:ro
       - backups:/backups
+    networks:
+      - mc-router
     depends_on:
       - vanilla
 
@@ -71,3 +75,6 @@ volumes:
   data:
   backups:
 
+networks:
+  mc-router:
+    driver: bridge
