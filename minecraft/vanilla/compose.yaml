@@ -77,4 +77,4 @@ volumes:
 
 networks:
   mc-router:
-    driver: bridge
+    external: true

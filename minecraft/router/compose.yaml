@@ -14,5 +14,4 @@ services:
 
 networks:
   mc-router:
-    driver: bridge
-
+    external: true
