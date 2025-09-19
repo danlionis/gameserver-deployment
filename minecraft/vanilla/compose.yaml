@@ -4,6 +4,7 @@ services:
     environment:
       EULA: "TRUE"
       TYPE: "PAPER"
+      VERSION: "1.21.8"
       MEMORY: "10G"
       ENABLE_RCON: "true"
       RCON_PASSWORD: ${RCON_PASSWORD:-supersecret}
