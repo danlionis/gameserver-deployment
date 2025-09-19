@@ -51,7 +51,7 @@ services:
     networks:
       - mc-router
     labels:
-      mc-router.host: "vanilla.mc.dummsuff.com"
+      mc-router.host: "dummsuff.com"
 
   backup:
     image: itzg/mc-backup
