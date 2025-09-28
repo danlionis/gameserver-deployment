@@ -19,7 +19,7 @@ services:
       OPS: |
         FashleHD
     volumes:
-      - atmsky:/data
+      - data:/data
     networks:
       - mc-router
     labels:
@@ -35,8 +35,8 @@ services:
       RCON_PASSWORD: ${RCON_PASSWORD:-supersecret}
       TZ: "Europe/Berlin"
     volumes:
-      - atmsky_data:/data:ro
-      - atmsky_backups:/backups
+      - data:/data:ro
+      - backups:/backups
     networks:
       - mc-router
     depends_on:
