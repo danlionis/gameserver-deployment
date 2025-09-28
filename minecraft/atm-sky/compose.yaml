@@ -19,11 +19,11 @@ services:
       OPS: |
         FashleHD
     volumes:
-      - skyfactory:/data
+      - atmsky:/data
     networks:
       - mc-router
     labels:
-      mc-router.host: "skyfactory.mc.dummsuff.com"
+      mc-router.host: "atmsky.mc.dummsuff.com"
 
   backup:
     image: itzg/mc-backup
@@ -35,8 +35,8 @@ services:
       RCON_PASSWORD: ${RCON_PASSWORD:-supersecret}
       TZ: "Europe/Berlin"
     volumes:
-      - skyfactory_data:/data:ro
-      - skyfactory_backups:/backups
+      - atmsky_data:/data:ro
+      - atmsky_backups:/backups
     networks:
       - mc-router
     depends_on:
