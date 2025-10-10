@@ -56,12 +56,14 @@ services:
         ore_plus:2.48.81.2-x4_mod
         armorstandeditor
         headindex
+        anti-xray
       MODRINTH_DOWNLOAD_DEPENDENCIES: required
       SEED: "-2124094445"
       SPAWN_PROTECTION: 0
     volumes:
       # - ./snowy-biomes-mod/build/libs:/mods
       - ./config:/config
+      - ./mods:/mods
       - data:/data
     networks:
       - mc-router
