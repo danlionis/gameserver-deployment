@@ -1,6 +1,6 @@
 {
   "permissionLevel": 0,
-  "economyType": "FREE",
-  "costType": "minecraft:diamond",
+  "economyType": "ITEM",
+  "costType": "minecraft:iron_ingot",
   "costAmount": 1
 }
