@@ -4,7 +4,7 @@ services:
     environment:
       EULA: "TRUE"
       TYPE: FABRIC
-      VERSION: 1.21.8
+      VERSION: 1.21.10
       MEMORY: "10G"
       ENABLE_RCON: "true"
       RCON_PASSWORD: ${RCON_PASSWORD:-supersecret}
@@ -48,15 +48,16 @@ services:
       MODRINTH_PROJECTS: |
         fabric-api
         lithium
-        ferrite-core
-        krypton
-        c2me-fabric
         scalablelux
         terralith
-        ore_plus:2.48.81.2-x4_mod
         armorstandeditor
         headindex
         anti-xray
+      NOT_YET_ON_NEWEST_VERSION: |
+        ferrite-core
+        krypton
+        c2me-fabric
+        ore_plus
       MODRINTH_DOWNLOAD_DEPENDENCIES: required
       SEED: "-2124094445"
       SPAWN_PROTECTION: 0
