@@ -62,6 +62,7 @@ services:
     volumes:
       # - ./snowy-biomes-mod/build/libs:/mods
       - ./config:/config
+      - data:/data
     networks:
       - mc-router
     labels:
