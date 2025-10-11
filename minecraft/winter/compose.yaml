@@ -51,12 +51,12 @@ services:
         scalablelux
         terralith
         armorstandeditor
-        headindex:1.1.13
         anti-xray
       NOT_YET_ON_NEWEST_VERSION: |
         ferrite-core
         krypton
         c2me-fabric
+        headindex
         ore_plus
       MODRINTH_DOWNLOAD_DEPENDENCIES: required
       SEED: "-2124094445"
