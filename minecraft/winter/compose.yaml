@@ -51,7 +51,7 @@ services:
         scalablelux
         terralith
         armorstandeditor
-        headindex
+        headindex:1.1.13
         anti-xray
       NOT_YET_ON_NEWEST_VERSION: |
         ferrite-core
