@@ -43,6 +43,7 @@ services:
         quietspan
         seibsan
         yungmoxer
+        RusskiCraft
       OPS: |
         DerDreckigeDan
       MODRINTH_PROJECTS: |
