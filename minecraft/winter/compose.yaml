@@ -53,6 +53,7 @@ services:
         terralith
         armorstandeditor
         anti-xray
+        tree-harvester
       NOT_YET_ON_NEWEST_VERSION: |
         ferrite-core
         krypton
