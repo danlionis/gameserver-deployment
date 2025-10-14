@@ -54,6 +54,7 @@ services:
         armorstandeditor
         anti-xray
         tree-harvester
+        distanthorizons
       NOT_YET_ON_NEWEST_VERSION: |
         ferrite-core
         krypton
