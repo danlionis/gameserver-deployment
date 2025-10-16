@@ -52,7 +52,6 @@ services:
         scalablelux
         terralith
         armorstandeditor
-        anti-xray
         tree-harvester
         distanthorizons:2.3.6-b-1.21.10
         areas
