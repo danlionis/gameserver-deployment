@@ -5,7 +5,7 @@ services:
       EULA: "TRUE"
       TYPE: "PAPER"
       VERSION: "1.21.8"
-      MEMORY: "10G"
+      MEMORY: "2G"
       ENABLE_RCON: "true"
       RCON_PASSWORD: ${RCON_PASSWORD:-supersecret}
       ENABLE_QUERY: "true"
@@ -60,6 +60,7 @@ services:
       BACKUP_INTERVAL: "24h"
       BACKUP_RETENTION_DAYS: "7"
       INITIAL_DELAY: "60s"
+      TAR_COMPRESS_METHOD: zstd
       RCON_HOST: vanilla
       RCON_PASSWORD: ${RCON_PASSWORD:-supersecret}
       TZ: "Europe/Berlin"
