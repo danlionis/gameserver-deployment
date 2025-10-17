@@ -53,7 +53,6 @@ services:
         terralith
         armorstandeditor
         tree-harvester
-        distanthorizons:2.3.6-b-1.21.10
         areas
         invview
       NOT_YET_ON_NEWEST_VERSION: |
@@ -62,6 +61,7 @@ services:
         c2me-fabric
         headindex
         ore_plus
+        distanthorizons:2.3.6-b-1.21.10 # buggy
       MODRINTH_DOWNLOAD_DEPENDENCIES: required
       SEED: "-2124094445"
       SPAWN_PROTECTION: 0
