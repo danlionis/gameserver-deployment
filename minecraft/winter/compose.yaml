@@ -44,6 +44,7 @@ services:
         seibsan
         yungmoxer
         RusskiCraft
+        ThatFriendlyGuy
       OPS: |
         DerDreckigeDan
       MODRINTH_PROJECTS: |
