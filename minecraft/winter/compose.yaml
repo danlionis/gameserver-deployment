@@ -65,6 +65,7 @@ services:
       MODRINTH_DOWNLOAD_DEPENDENCIES: required
       SEED: "-2124094445"
       SPAWN_PROTECTION: 0
+      TZ: Europe/Berlin
     volumes:
       # - ./snowy-biomes-mod/build/libs:/mods
       - ./config:/config
