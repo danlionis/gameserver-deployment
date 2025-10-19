@@ -45,6 +45,7 @@ services:
         quietspan
         seibsan
         yungmoxer
+        triplesauce
       OPS: |
         DerDreckigeDan
     volumes:
