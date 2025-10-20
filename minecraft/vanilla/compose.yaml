@@ -56,11 +56,12 @@ services:
       mc-router.host: "dummsuff.com,vanilla.mc.dummsuff.com"
 
   backup:
-    image: itzg/mc-backup
+    image: itzg/mc-backup:latest
     environment:
-      BACKUP_INTERVAL: "24h"
-      BACKUP_RETENTION_DAYS: "7"
-      INITIAL_DELAY: "60s"
+      BACKUP_INTERVAL: "48h"
+      PRUNE_BACKUP_COUNT: "2"
+      PRUNE_BACKUPS_DAYS: 4
+      INITIAL_DELAY: "120s"
       TAR_COMPRESS_METHOD: zstd
       RCON_HOST: vanilla
       RCON_PASSWORD: ${RCON_PASSWORD:-supersecret}
