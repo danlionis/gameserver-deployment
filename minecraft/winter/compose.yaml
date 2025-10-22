@@ -48,15 +48,16 @@ services:
       OPS: |
         DerDreckigeDan
       MODRINTH_PROJECTS: |
+        areas
+        armorstandeditor
         fabric-api
+        inventory-totem
+        invview
         lithium
         scalablelux
+        secure-crops
         terralith
-        armorstandeditor
         tree-harvester
-        areas
-        invview
-        inventory-totem
       NOT_YET_ON_NEWEST_VERSION: |
         ferrite-core
         krypton
