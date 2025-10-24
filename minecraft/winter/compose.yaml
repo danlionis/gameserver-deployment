@@ -54,6 +54,7 @@ services:
         inventory-totem
         invview
         lithium
+        netherportalfix
         scalablelux
         secure-crops
         terralith
