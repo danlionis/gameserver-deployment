@@ -59,6 +59,7 @@ services:
         secure-crops
         terralith
         tree-harvester
+        cycle-paintings
       NOT_YET_ON_NEWEST_VERSION: |
         ferrite-core
         krypton
