@@ -1,0 +1,13 @@
+{
+  "type": "datapacks",
+  "version": "1.21",
+  "packs": {
+    "gameplay changes": [
+      "armor statues",
+      "unlock all recipes",
+      "anti enderman grief",
+      "afk display",
+      "silence mobs"
+    ]
+  }
+}

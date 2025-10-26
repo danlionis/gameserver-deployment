@@ -47,6 +47,7 @@ services:
         ThatFriendlyGuy
       OPS: |
         DerDreckigeDan
+      VANILLATWEAKS_FILE: /config/vt-datapacks.json,/config/vt-craftingtweaks.json
       MODRINTH_PROJECTS: |
         areas
         armorstandeditor
