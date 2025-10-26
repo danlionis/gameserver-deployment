@@ -50,7 +50,13 @@ services:
       MODRINTH_PROJECTS: |
         areas
         armorstandeditor
+        c2me-fabric
+        clumps
+        conduits-prevent-drowned
+        cycle-paintings
         fabric-api
+        ferrite-core
+        headindex
         inventory-totem
         invview
         lithium
@@ -59,13 +65,8 @@ services:
         secure-crops
         terralith
         tree-harvester
-        cycle-paintings
-        conduits-prevent-drowned
       NOT_YET_ON_NEWEST_VERSION: |
-        ferrite-core
         krypton
-        c2me-fabric
-        headindex
         ore_plus
         distanthorizons:2.3.6-b-1.21.10 # buggy
       MODRINTH_DOWNLOAD_DEPENDENCIES: required
