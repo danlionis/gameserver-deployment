@@ -62,6 +62,7 @@ services:
         invview
         lithium
         netherportalfix
+        replanting-crops
         scalablelux
         secure-crops
         terralith
