@@ -12,7 +12,7 @@ services:
       DIFFICULTY: normal
       MODE: survival
       CF_API_KEY: ${CF_API_KEY}
-      CF_PAGE_URL: https://www.curseforge.com/minecraft/modpacks/all-the-mods-10-sky
+      CF_SLUG: all-the-mods-10-sky
       WHITELIST: |
         FashleHD
         Daiilvorn
@@ -25,26 +25,26 @@ services:
     labels:
       mc-router.host: "atmsky.mc.dummsuff.com"
 
-  backup:
-    image: itzg/mc-backup
-    environment:
-      BACKUP_INTERVAL: "24h"
-      BACKUP_RETENTION_DAYS: "4"
-      INITIAL_DELAY: "60s"
-      RCON_HOST: server
-      RCON_PASSWORD: ${RCON_PASSWORD:-supersecret}
-      TZ: "Europe/Berlin"
-    volumes:
-      - data:/data:ro
-      - backups:/backups
-    networks:
-      - mc-router
-    depends_on:
-      - server
+  # backup:
+  #   image: itzg/mc-backup
+  #   environment:
+  #     BACKUP_INTERVAL: "24h"
+  #     BACKUP_RETENTION_DAYS: "4"
+  #     INITIAL_DELAY: "60s"
+  #     RCON_HOST: server
+  #     RCON_PASSWORD: ${RCON_PASSWORD:-supersecret}
+  #     TZ: "Europe/Berlin"
+  #   volumes:
+  #     - data:/data:ro
+  #     - backups:/backups
+  #   networks:
+  #     - mc-router
+  #   depends_on:
+  #     - server
 
 volumes:
   data:
-  backups:
+#   backups:
 
 networks:
   mc-router:
