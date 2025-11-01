@@ -45,6 +45,7 @@ services:
         yungmoxer
         RusskiCraft
         ThatFriendlyGuy
+        Pojo64
       OPS: |
         DerDreckigeDan
       VANILLATWEAKS_FILE: /config/vt-datapacks.json,/config/vt-craftingtweaks.json
