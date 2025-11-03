@@ -1,6 +1,6 @@
 services:
   server:
-    image: itzg/minecraft-server:latest
+    image: itzg/minecraft-server
     environment:
       EULA: "TRUE"
       TYPE: "AUTO_CURSEFORGE"
@@ -15,7 +15,7 @@ services:
       CF_SLUG: all-the-mods-10-sky
       WHITELIST: |
         FashleHD
-        Daiilvorn
+        Dailvorn
       OPS: |
         FashleHD
     volumes:
@@ -25,26 +25,10 @@ services:
     labels:
       mc-router.host: "atmsky.mc.dummsuff.com"
 
-  # backup:
-  #   image: itzg/mc-backup
-  #   environment:
-  #     BACKUP_INTERVAL: "24h"
-  #     BACKUP_RETENTION_DAYS: "4"
-  #     INITIAL_DELAY: "60s"
-  #     RCON_HOST: server
-  #     RCON_PASSWORD: ${RCON_PASSWORD:-supersecret}
-  #     TZ: "Europe/Berlin"
-  #   volumes:
-  #     - data:/data:ro
-  #     - backups:/backups
-  #   networks:
-  #     - mc-router
-  #   depends_on:
-  #     - server
+    # no backup, modpack includes its own backups
 
 volumes:
   data:
-#   backups:
 
 networks:
   mc-router:
