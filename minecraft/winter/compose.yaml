@@ -112,6 +112,7 @@ services:
     volumes:
       - ./copyparty.conf:/cfg/copyparty.conf:z
       - data:/data:z
+      - backups:/backups:z
 
     environment:
       LD_PRELOAD: /usr/lib/libmimalloc-secure.so.NOPE
