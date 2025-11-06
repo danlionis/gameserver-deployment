@@ -1,6 +1,7 @@
 services:
   server:
     image: itzg/minecraft-server:latest
+    restart: on-failure
     environment:
       EULA: "TRUE"
       TYPE: FABRIC
