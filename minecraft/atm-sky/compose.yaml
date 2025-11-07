@@ -1,21 +1,24 @@
 services:
   server:
     image: itzg/minecraft-server
+    restart: unless-stopped
     environment:
       EULA: "TRUE"
       TYPE: "AUTO_CURSEFORGE"
-      MEMORY: "4G"
+      MEMORY: "10G"
       ENABLE_RCON: "true"
       RCON_PASSWORD: ${RCON_PASSWORD:-supersecret}
       ENABLE_QUERY: "true"
-      MOTD: "beppo"
+      MOTD: "Dan ist der Beste <3"
       DIFFICULTY: normal
       MODE: survival
       CF_API_KEY: ${CF_API_KEY}
       CF_SLUG: all-the-mods-10-sky
       WHITELIST: |
-        FashleHD
         Dailvorn
+        FashleHD
+        MrEnd_MC
+        Sushirolle3_0
       OPS: |
         FashleHD
     volumes:
@@ -24,6 +27,11 @@ services:
       - mc-router
     labels:
       mc-router.host: "atmsky.mc.dummsuff.com"
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 10G
 
     # no backup, modpack includes its own backups
 
