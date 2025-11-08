@@ -1,7 +1,7 @@
 services:
   server:
     image: itzg/minecraft-server:latest
-    restart: on-failure
+    restart: unless-stopped
     environment:
       EULA: "TRUE"
       TYPE: FABRIC
@@ -51,6 +51,7 @@ services:
         DerDreckigeDan
       VANILLATWEAKS_FILE: /config/vt-datapacks.json,/config/vt-craftingtweaks.json
       MODRINTH_PROJECTS: |
+        anti-xray
         areas
         armorstandeditor
         c2me-fabric
