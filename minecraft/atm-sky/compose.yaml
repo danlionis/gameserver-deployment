@@ -14,6 +14,7 @@ services:
       MODE: survival
       CF_API_KEY: ${CF_API_KEY}
       CF_SLUG: all-the-mods-10-sky
+      ALLOW_FLIGHT: TRUE
       WHITELIST: |
         Dailvorn
         FashleHD
