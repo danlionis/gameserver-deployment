@@ -5,7 +5,7 @@ services:
     environment:
       EULA: "TRUE"
       TYPE: "AUTO_CURSEFORGE"
-      MEMORY: "10G"
+      MEMORY: "7G"
       ENABLE_RCON: "true"
       RCON_PASSWORD: ${RCON_PASSWORD:-supersecret}
       ENABLE_QUERY: "true"
@@ -31,7 +31,7 @@ services:
       resources:
         limits:
           cpus: '2'
-          memory: 10G
+          memory: 8G
 
     # no backup, modpack includes its own backups
 
