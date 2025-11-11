@@ -90,6 +90,7 @@ services:
 
   backup:
     image: itzg/mc-backup
+    restart: unless-stopped
     environment:
       BACKUP_INTERVAL: "24h"
       BACKUP_RETENTION_DAYS: "3"
