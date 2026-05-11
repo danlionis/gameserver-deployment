@@ -18,6 +18,11 @@ services:
       WHITELIST: |
         FashleHD
         Sev_Fix
+        Sushirolle3_0
+        miritzu
+        RusskiCraft
+        Iffu
+        TheRealWurst
       OPS: |
         FashleHD
     volumes:
