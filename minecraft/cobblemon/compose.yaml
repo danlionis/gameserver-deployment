@@ -21,8 +21,8 @@ services:
         Sushirolle3_0
         miritzu
         RusskiCraft
-        Iffu
         TheRealWurst
+        xsmuli
       OPS: |
         FashleHD
     volumes:
@@ -37,8 +37,28 @@ services:
           cpus: "2"
           memory: 10GB
 
+  backup:
+    image: itzg/mc-backup
+    restart: unless-stopped
+    environment:
+      BACKUP_INTERVAL: "24h"
+      BACKUP_RETENTION_DAYS: "3"
+      INITIAL_DELAY: "180s"
+      RCON_HOST: server
+      TAR_COMPRESS_METHOD: zstd
+      RCON_PASSWORD: ${RCON_PASSWORD:-supersecret}
+      TZ: "Europe/Berlin"
+    volumes:
+      - data:/data:ro
+      - backups:/backups
+    networks:
+      - mc-router
+    depends_on:
+      - server
+
 volumes:
   data:
+  backups:
 
 networks:
   mc-router:
