@@ -5,12 +5,16 @@ services:
     environment:
       IN_DOCKER: "true"
       SIMPLIFY_SRV: true
+      METRICS_BACKEND: prometheus
+      RECORD_LOGINS: true
+      # API_BINDING: 25566
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
     networks:
       - mc-router
     ports:
       - "25565:25565"
+      # - "25566:25566"
     restart: unless-stopped
 
 networks:
