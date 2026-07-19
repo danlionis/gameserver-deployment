@@ -92,8 +92,8 @@ services:
     image: itzg/mc-backup
     restart: unless-stopped
     environment:
-      BACKUP_INTERVAL: "48h"
-      BACKUP_RETENTION_DAYS: "3"
+      BACKUP_INTERVAL: "24h"
+      PAUSE_IF_NO_PLAYERS: true
       INITIAL_DELAY: "180s"
       RCON_HOST: server
       TAR_COMPRESS_METHOD: zstd
