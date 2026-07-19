@@ -14,7 +14,7 @@ services:
       PORT: 8211 # Optional but recommended
       PLAYERS: 16 # Optional but recommended
       # SERVER_PASSWORD: "worldofpals" # Optional but recommended
-      MULTITHREADING: true
+      ENABLE_PERF_THREADING_ARGS: true
       REST_API_ENABLED: false
       REST_API_PORT: 8212
       TZ: "UTC"
@@ -22,7 +22,8 @@ services:
       COMMUNITY: false # Enable this if you want your server to show up in the community servers tab, USE WITH SERVER_PASSWORD!
       SERVER_NAME: "Pokemon Server"
       SERVER_DESCRIPTION: "Pokemon Server"
-      CROSSPLAY_PLATFORMS: "(Steam)"
+      CROSSPLAY_PLATFORMS: "(Steam,Xbox,PS5,Mac)"
+
     volumes:
       - data:/palworld/
 
