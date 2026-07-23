@@ -6,7 +6,7 @@ services:
       EULA: "TRUE"
       TYPE: FABRIC
       VERSION: 1.21.11
-      MEMORY: "10G"
+      MEMORY: "6G"
       ENABLE_RCON: "true"
       RCON_PASSWORD: ${RCON_PASSWORD:-supersecret}
       ENABLE_QUERY: "true"
