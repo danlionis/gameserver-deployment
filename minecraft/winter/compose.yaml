@@ -2,6 +2,7 @@ services:
   server:
     image: itzg/minecraft-server:latest
     restart: unless-stopped
+    mem_limit: 8g
     environment:
       EULA: "TRUE"
       TYPE: FABRIC
@@ -77,6 +78,7 @@ services:
       MODRINTH_DOWNLOAD_DEPENDENCIES: required
       SEED: "-2124094445"
       SPAWN_PROTECTION: 0
+      JVM_OPTS: "-XX:G1PeriodicGCInterval=10000"
       TZ: Europe/Berlin
     volumes:
       # - ./snowy-biomes-mod/build/libs:/mods
