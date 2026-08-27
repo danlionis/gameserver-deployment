@@ -6,7 +6,7 @@ services:
     environment:
       EULA: "TRUE"
       TYPE: FABRIC
-      VERSION: 1.21.11
+      VERSION: 26.2
       MEMORY: "6G"
       ENABLE_RCON: "true"
       RCON_PASSWORD: ${RCON_PASSWORD:-supersecret}
