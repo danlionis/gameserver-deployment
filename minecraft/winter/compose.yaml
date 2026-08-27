@@ -1,6 +1,6 @@
 services:
   server:
-    image: itzg/minecraft-server:latest
+    image: itzg/minecraft-server:java25
     restart: unless-stopped
     mem_limit: 8g
     environment:
@@ -55,7 +55,7 @@ services:
         anti-xray
         areas
         armorstandeditor
-        c2me-fabric:0.3.7+alpha.0.2+1.21.11
+        c2me-fabric:0.4.2-alpha.0.43+26.2
         clumps
         conduits-prevent-drowned
         cycle-paintings
