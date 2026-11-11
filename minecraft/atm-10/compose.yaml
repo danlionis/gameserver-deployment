@@ -23,6 +23,8 @@ services:
         Sushirolle3_0
       OPS: |
         FashleHD
+    networks:
+      - mc-router
     volumes:
       - data:/data
     labels:
@@ -30,10 +32,14 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '2'
+          cpus: "2"
           memory: 4G
 
     # no backup, modpack includes its own backups
 
 volumes:
   data:
+
+networks:
+  mc-router:
+    external: true
