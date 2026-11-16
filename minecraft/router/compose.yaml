@@ -8,6 +8,8 @@ services:
       METRICS_BACKEND: prometheus
       RECORD_LOGINS: true
       # API_BINDING: 25566
+      MAPPING: |
+        atmx.mc.dummsuff.com=10.69.0.2:25565
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
     networks:
